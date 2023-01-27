@@ -1,0 +1,22 @@
+name: exercise lint
+on: push
+jobs:
+ jsonproject:
+  runs-on: ubuntu-latest
+  steps:
+   - name: getting code
+     uses: actions/checkout@v3
+   - name: downloading node
+     uses: actions/setup-node@v3
+     with:
+      node-version: 18
+   - name: dependencies
+     run: npm ci
+   - name: lint
+     run: npm run lint
+   - name: test
+     run: npm run test
+   - name: build
+     run: npm run build
+   - name: deploy
+     run: echo "deployed"
