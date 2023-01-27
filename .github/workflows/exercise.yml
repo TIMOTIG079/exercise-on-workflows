@@ -27,6 +27,7 @@ jobs:
    issues: write
   steps:
    - name: creating an issue
+     uses: actions/checkout@v3
      uses: JasonEtco/create-an-issue@v2
      env:
        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
