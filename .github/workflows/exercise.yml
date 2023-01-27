@@ -28,6 +28,6 @@ jobs:
   steps:
    - name: creating an issue
      uses: JasonEtco/create-an-issue@v2
-      env:
+     env:
        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
      
