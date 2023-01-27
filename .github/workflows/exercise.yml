@@ -20,3 +20,14 @@ jobs:
      run: npm run build
    - name: deploy
      run: echo "deployed"
+ issues:
+  runs-on: ubuntu-latest
+  permissions:
+   contents: read
+   issues: write
+  steps:
+   - name: creating an issue
+     uses: JasonEtco/create-an-issue@v2
+      env:
+       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+     
